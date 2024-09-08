@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Footer from "./Components/Footer";
 
 import Contact from "./Pages/Contact";
+import OurWork from "./Pages/OurWork";
 const App: React.FC = () => {
 	return (
 		<Router>
@@ -21,6 +22,7 @@ const App: React.FC = () => {
 						<Route path='/' element={<Home />} />
 						<Route path='/about' element={<About />} />
 						<Route path='/contact' element={<Contact />} />
+						<Route path='/ourWork' element={<OurWork />} />
 
 						{/* Add other routes as needed */}
 					</Routes>

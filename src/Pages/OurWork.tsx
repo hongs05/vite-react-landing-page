@@ -1,47 +1,51 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bridge from "../assets/bridge.jpg";
-import office from "../assets/office.jpg";
-import garden from "../assets/garden.jpeg";
-
+import comercialComplex from "../assets/comercialComplex.jpg";
+import modernOffice from "../assets/modernOffice.jpg";
+import luxuryVillage from "../assets/luxvillage.jpeg";
+import urbanPark from "../assets/urbanPark.jpg";
 const projects = [
 	{
 		id: 1,
 		title: "Modern Office Building",
-		image: office, // Use require to import the image
+		image: modernOffice,
 		description:
 			"A state-of-the-art office building with an eco-friendly design.",
 	},
 	{
 		id: 2,
 		title: "Luxury Residential Villa",
-		image: bridge,
+		image: luxuryVillage,
 		description: "A luxurious villa designed with contemporary architecture.",
 	},
 	{
 		id: 3,
 		title: "Urban Park Redesign",
-		image: garden,
+		image: urbanPark,
 		description: "A revitalized urban park promoting green living.",
+	},
+	{
+		id: 4,
+		title: "Commercial Complex",
+		image: comercialComplex,
+		description: "A modern commercial complex for retail and offices.",
 	},
 ];
 
-const FeaturedProjects: React.FC = () => {
+const OurWork: React.FC = () => {
 	return (
-		<section className='px-8 py-16 bg-white'>
+		<section className='px-8 py-16 bg-gray-100'>
 			<div className='max-w-6xl mx-auto'>
-				<h2 className='text-4xl font-bold text-center mb-12'>
-					Featured Projects
-				</h2>
+				<h2 className='text-4xl font-bold text-center mb-12'>Our Work</h2>
 
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 					{projects.map((project) => (
 						<motion.div
 							key={project.id}
-							className='bg-gray-100 rounded-lg shadow-md overflow-hidden'
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, delay: project.id * 0.1 }}
+							className='bg-white rounded-lg shadow-md overflow-hidden'
+							initial={{ opacity: 0, scale: 0.9 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true, amount: 0.3 }}>
 							<img
 								src={project.image}
@@ -60,4 +64,4 @@ const FeaturedProjects: React.FC = () => {
 	);
 };
 
-export default FeaturedProjects;
+export default OurWork;

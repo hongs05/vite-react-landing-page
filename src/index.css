@@ -84,20 +84,18 @@ button {
 }
 
 /* Footer styles */
-footer {
+/* footer {
   background-color: #333;
   color: #fff;
   padding: 2rem 0;
   text-align: center;
+} */
+
+footer {
+  background-color: #1f2937; /* Tailwind gray-900 */
+  color: #ffffff; /* White text */
 }
 
 footer a {
-  color: var(--color-accent);
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 600;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
 }

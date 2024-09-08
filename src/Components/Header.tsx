@@ -29,6 +29,11 @@ const Header: React.FC = () => {
 							Contact
 						</Link>
 					</li>
+					{/* <li>
+						<Link to='/ourWork' className='hover:text-red-500 transition'>
+							OurWork
+						</Link>
+					</li> */}
 					{/* Add more links as needed */}
 				</ul>
 			</nav>

@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+/* Import Tailwind's utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main App styles */
+.app-container {
+  min-height: 100vh; /* Ensures the app takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps footer at the bottom */
+  font-family: 'Montserrat', sans-serif; /* Custom font for the entire app */
+}
+
+/* Navbar styles */
+.navbar {
+  @apply flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-50;
+}
+
+.navbar a {
+  @apply text-lg text-gray-700 font-semibold hover:text-red-500 transition-colors duration-300;
+}
+
+/* Hero section styles */
+.hero-section {
+/* Background image for the hero section */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(500vh - 580px); /* Adjusts height to fill viewport minus navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 2rem;
+  color: white;
+ 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Button styles */
+.btn-primary {
+  @apply bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer styles */
+.footer {
+  @apply bg-gray-800 text-white text-center py-4 mt-8;
+}
+
+.footer a {
+  @apply text-red-500 hover:text-red-700 transition-colors duration-300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    
+    height: auto; /* Adjust hero height for smaller screens */
+    padding: 4rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    @apply flex-col;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .navbar a {
+    @apply mb-2;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

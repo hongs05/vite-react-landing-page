@@ -1,4 +1,3 @@
-// src/pages/Services.tsx
 import React from "react";
 
 const services = [
